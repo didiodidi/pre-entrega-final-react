@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../Items/ItemCounter/Buttons.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function ItemCounter({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
@@ -29,23 +29,27 @@ function ItemCounter({ stock, initial, onAdd }) {
 
   return (
     <>
-      <div className="btn-format">
+      
         <div className="btn-container">
           <div className="btn-flex">
-            <button onClick={decrement} className="btnEffect1"> - </button>
+            <button onClick={decrement} className="btnEffect1">
+              -
+            </button>
             <p>{count}</p>
-            <button onClick={increment} className="btnEffect2"> + </button>
+            <button onClick={increment} className="btnEffect2">
+              +
+            </button>
           </div>
-          <div>
-            <button className="agregar-carrito" onClick={addToCart}>
+          <div className="agregar-carrito">
+            <button  onClick={addToCart}>
               Agregar al carrito
             </button>
-            <Link to={'/cart'} className="agregar-carrito">
-              Finalizar compra
-            </Link>
+              <Link to={"/cart"}>
+                <button style={{width:"100px",padding:"1px"}}>Finalizar compra</button>
+              </Link>
           </div>
         </div>
-      </div>
+      
     </>
   );
 }
