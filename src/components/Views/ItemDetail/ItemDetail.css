@@ -1,0 +1,13 @@
+.itemList-container{
+    
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.itemList-container div{
+    min-width: 300px;
+}
